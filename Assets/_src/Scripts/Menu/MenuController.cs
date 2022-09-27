@@ -11,6 +11,7 @@ namespace PedroAurelio.MenuScreens
         [Header("Dependencies")]
         [SerializeField] private MenuPage initialPage;
         [SerializeField] private GameObject firstFocusItem;
+        [SerializeField] private List<GameObject> exitButtons;
 
         [Header("Settings")]
         [SerializeField] private bool shouldAnimateFirst;
@@ -21,6 +22,11 @@ namespace PedroAurelio.MenuScreens
         private void Start()
         {
             _shouldAnimate = shouldAnimateFirst;
+
+            #if UNITY_WEBGL && !UNITY_EDITOR
+                foreach (GameObject button in exitButtons)
+                    button.SetActive(false);
+            #endif
 
             if (firstFocusItem != null)
                 EventSystem.current.SetSelectedGameObject(firstFocusItem);
