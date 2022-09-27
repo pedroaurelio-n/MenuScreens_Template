@@ -29,15 +29,9 @@ namespace PedroAurelio.MenuScreens
                 PushPage(initialPage);
         }
 
-        // private void OnCancel()
-        // {
-        //     if (_rootCanvas.enabled && _rootCanvas.gameObject.activeInHierarchy)
-        //     {
-        //         if (_pageStack.Count != 0)
-        //             PopPage();
-        //     }
-        // }
+        public void ExitGame() => Application.Quit();
 
+        #region Bool Checks
         public bool IsPageInStack(MenuPage page)
         {
             return _pageStack.Contains(page);
@@ -47,7 +41,9 @@ namespace PedroAurelio.MenuScreens
         {
             return _pageStack.Count > 0 && page == _pageStack.Peek();
         }
+        #endregion
 
+        #region Stack Methods
         public void PushPage(MenuPage newPage)
         {
             if (!_shouldAnimate)
@@ -89,5 +85,6 @@ namespace PedroAurelio.MenuScreens
                 PopPage();
             }
         }
+        #endregion
     }
 }
