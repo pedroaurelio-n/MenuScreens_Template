@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 18048793}
   - component: {fileID: 18048792}
   - component: {fileID: 18048791}
+  - component: {fileID: 18048794}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -290,9 +291,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -312,6 +313,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 18048794}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 347401894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -374,6 +388,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18048789}
   m_CullTransparentMesh: 1
+--- !u!114 &18048794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18048789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &25884814
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +533,7 @@ GameObject:
   - component: {fileID: 112848765}
   - component: {fileID: 112848764}
   - component: {fileID: 112848763}
+  - component: {fileID: 112848766}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -549,9 +584,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -571,6 +606,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 112848766}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1230635046}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -633,6 +681,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112848761}
   m_CullTransparentMesh: 1
+--- !u!114 &112848766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112848761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &123085902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2429,7 @@ RectTransform:
   m_Children:
   - {fileID: 659224254}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2490,9 +2558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitOnNewPagePush: 1
   rectTransform: {fileID: 0}
-  animationDuration: 1
+  animationDuration: 0.8
   entryClip: {fileID: 0}
-  entryMode: 0
+  entryMode: 1
   onEntryStart:
     m_PersistentCalls:
       m_Calls:
@@ -2512,7 +2580,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   exitClip: {fileID: 0}
-  exitMode: 0
+  exitMode: 1
   onExitStart:
     m_PersistentCalls:
       m_Calls:
@@ -2555,6 +2623,7 @@ GameObject:
   - component: {fileID: 354414940}
   - component: {fileID: 354414939}
   - component: {fileID: 354414938}
+  - component: {fileID: 354414941}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -2605,9 +2674,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2627,6 +2696,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 354414941}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1753001210}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2689,6 +2771,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354414936}
   m_CullTransparentMesh: 1
+--- !u!114 &354414941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354414936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &370062478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3491,7 @@ GameObject:
   - component: {fileID: 438445352}
   - component: {fileID: 438445351}
   - component: {fileID: 438445350}
+  - component: {fileID: 438445353}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -3439,9 +3542,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3461,6 +3564,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 438445353}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 347401894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3523,6 +3639,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438445348}
   m_CullTransparentMesh: 1
+--- !u!114 &438445353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438445348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &444700319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,6 +3671,7 @@ GameObject:
   - component: {fileID: 444700323}
   - component: {fileID: 444700322}
   - component: {fileID: 444700321}
+  - component: {fileID: 444700324}
   m_Layer: 5
   m_Name: Reset Button
   m_TagString: Untagged
@@ -3585,9 +3722,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3606,7 +3743,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 444700322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 444700324}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &444700322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,6 +3795,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444700319}
   m_CullTransparentMesh: 1
+--- !u!114 &444700324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444700319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c8488cfbc3f01b345948c3416535444c, type: 2}
+  playOnStart: 0
 --- !u!1 &452167987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,6 +4717,7 @@ GameObject:
   - component: {fileID: 538569683}
   - component: {fileID: 538569682}
   - component: {fileID: 538569681}
+  - component: {fileID: 538569684}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -4597,9 +4768,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4618,7 +4789,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 538569682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 538569684}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &538569682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4657,6 +4841,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538569679}
   m_CullTransparentMesh: 1
+--- !u!114 &538569684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538569679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &547104309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,9 +5266,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5725,6 +5929,7 @@ GameObject:
   - component: {fileID: 670935530}
   - component: {fileID: 670935529}
   - component: {fileID: 670935528}
+  - component: {fileID: 670935531}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -5775,9 +5980,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5797,6 +6002,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 670935531}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 347401894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -5859,6 +6077,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670935526}
   m_CullTransparentMesh: 1
+--- !u!114 &670935531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670935526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &682682521
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,6 +7290,7 @@ GameObject:
   - component: {fileID: 800332475}
   - component: {fileID: 800332474}
   - component: {fileID: 800332473}
+  - component: {fileID: 800332476}
   m_Layer: 5
   m_Name: Reset Button
   m_TagString: Untagged
@@ -7102,9 +7341,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7124,6 +7363,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 800332476}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 437977520}
         m_TargetAssemblyTypeName: PedroAurelio.MenuScreens.Settings.AudioSettings,
           Assembly-CSharp
@@ -7175,6 +7427,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800332471}
   m_CullTransparentMesh: 1
+--- !u!114 &800332476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800332471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c8488cfbc3f01b345948c3416535444c, type: 2}
+  playOnStart: 0
 --- !u!1 &805097554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,6 +7843,7 @@ GameObject:
   - component: {fileID: 921864099}
   - component: {fileID: 921864098}
   - component: {fileID: 921864097}
+  - component: {fileID: 921864100}
   m_Layer: 5
   m_Name: Instructions Button
   m_TagString: Untagged
@@ -7621,9 +7894,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7643,6 +7916,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 921864100}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1251410356}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7705,6 +7991,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921864095}
   m_CullTransparentMesh: 1
+--- !u!114 &921864100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921864095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &923349634
 GameObject:
   m_ObjectHideFlags: 0
@@ -7852,6 +8158,7 @@ GameObject:
   - component: {fileID: 936265050}
   - component: {fileID: 936265049}
   - component: {fileID: 936265048}
+  - component: {fileID: 936265051}
   m_Layer: 5
   m_Name: Graphics Button
   m_TagString: Untagged
@@ -7902,9 +8209,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7924,6 +8231,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 936265051}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7998,6 +8318,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936265046}
   m_CullTransparentMesh: 1
+--- !u!114 &936265051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936265046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &948032919
 GameObject:
   m_ObjectHideFlags: 0
@@ -10107,6 +10447,7 @@ GameObject:
   - component: {fileID: 1175200326}
   - component: {fileID: 1175200325}
   - component: {fileID: 1175200324}
+  - component: {fileID: 1175200327}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -10157,9 +10498,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10179,6 +10520,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1175200327}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10241,6 +10595,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175200322}
   m_CullTransparentMesh: 1
+--- !u!114 &1175200327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175200322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &1181999882
 GameObject:
   m_ObjectHideFlags: 0
@@ -10905,6 +11279,7 @@ GameObject:
   - component: {fileID: 1210189923}
   - component: {fileID: 1210189922}
   - component: {fileID: 1210189921}
+  - component: {fileID: 1210189924}
   m_Layer: 5
   m_Name: No Button
   m_TagString: Untagged
@@ -10955,9 +11330,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10977,6 +11352,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1210189924}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 347401894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -11039,6 +11427,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210189919}
   m_CullTransparentMesh: 1
+--- !u!114 &1210189924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210189919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &1215927970
 GameObject:
   m_ObjectHideFlags: 0
@@ -11051,6 +11459,7 @@ GameObject:
   - component: {fileID: 1215927974}
   - component: {fileID: 1215927973}
   - component: {fileID: 1215927972}
+  - component: {fileID: 1215927975}
   m_Layer: 5
   m_Name: Apply Button
   m_TagString: Untagged
@@ -11101,9 +11510,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11123,6 +11532,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1215927975}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -11185,6 +11607,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215927970}
   m_CullTransparentMesh: 1
+--- !u!114 &1215927975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215927970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &1230635046
 GameObject:
   m_ObjectHideFlags: 0
@@ -11282,7 +11724,7 @@ RectTransform:
   m_Children:
   - {fileID: 1244652716}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11411,9 +11853,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitOnNewPagePush: 0
   rectTransform: {fileID: 0}
-  animationDuration: 1
+  animationDuration: 0.8
   entryClip: {fileID: 0}
-  entryMode: 0
+  entryMode: 1
   onEntryStart:
     m_PersistentCalls:
       m_Calls:
@@ -11433,7 +11875,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   exitClip: {fileID: 0}
-  exitMode: 0
+  exitMode: 1
   onExitStart:
     m_PersistentCalls:
       m_Calls:
@@ -11734,7 +12176,7 @@ RectTransform:
   m_Children:
   - {fileID: 917746502}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11863,9 +12305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitOnNewPagePush: 1
   rectTransform: {fileID: 0}
-  animationDuration: 1
+  animationDuration: 0.8
   entryClip: {fileID: 0}
-  entryMode: 0
+  entryMode: 1
   onEntryStart:
     m_PersistentCalls:
       m_Calls:
@@ -11885,7 +12327,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   exitClip: {fileID: 0}
-  exitMode: 0
+  exitMode: 1
   onExitStart:
     m_PersistentCalls:
       m_Calls:
@@ -12970,7 +13412,7 @@ RectTransform:
   m_Children:
   - {fileID: 531190833}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13099,9 +13541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitOnNewPagePush: 1
   rectTransform: {fileID: 0}
-  animationDuration: 1
+  animationDuration: 0.8
   entryClip: {fileID: 0}
-  entryMode: 0
+  entryMode: 1
   onEntryStart:
     m_PersistentCalls:
       m_Calls:
@@ -13121,7 +13563,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   exitClip: {fileID: 0}
-  exitMode: 0
+  exitMode: 1
   onExitStart:
     m_PersistentCalls:
       m_Calls:
@@ -14259,6 +14701,163 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461292485}
   m_CullTransparentMesh: 1
+--- !u!1 &1474599749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474599753}
+  - component: {fileID: 1474599752}
+  - component: {fileID: 1474599751}
+  - component: {fileID: 1474599750}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1474599750
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474599749}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1474599751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474599749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a569d941eaa997d49acf2bd065177d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  delay: 0
+  isOneShot: 0
+--- !u!114 &1474599752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474599749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb29a05c495e1c4eaed7f218bad4972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1474599753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474599749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 946.05725, y: 513.51337, z: -4.753593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475757113
 GameObject:
   m_ObjectHideFlags: 0
@@ -14271,6 +14870,7 @@ GameObject:
   - component: {fileID: 1475757117}
   - component: {fileID: 1475757116}
   - component: {fileID: 1475757115}
+  - component: {fileID: 1475757118}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -14321,9 +14921,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -14343,6 +14943,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1475757118}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 437977520}
         m_TargetAssemblyTypeName: PedroAurelio.MenuScreens.Settings.AudioSettings,
           Assembly-CSharp
@@ -14418,6 +15031,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475757113}
   m_CullTransparentMesh: 1
+--- !u!114 &1475757118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475757113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &1486171077
 GameObject:
   m_ObjectHideFlags: 0
@@ -15148,6 +15781,7 @@ GameObject:
   - component: {fileID: 1526848955}
   - component: {fileID: 1526848954}
   - component: {fileID: 1526848953}
+  - component: {fileID: 1526848956}
   m_Layer: 5
   m_Name: Audio Button
   m_TagString: Untagged
@@ -15198,9 +15832,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -15220,6 +15854,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1526848956}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -15294,6 +15941,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526848951}
   m_CullTransparentMesh: 1
+--- !u!114 &1526848956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526848951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &1527427317
 GameObject:
   m_ObjectHideFlags: 0
@@ -15652,6 +16319,7 @@ GameObject:
   - component: {fileID: 1548558569}
   - component: {fileID: 1548558568}
   - component: {fileID: 1548558567}
+  - component: {fileID: 1548558570}
   m_Layer: 5
   m_Name: Gameplay Button
   m_TagString: Untagged
@@ -15702,9 +16370,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -15724,6 +16392,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1548558570}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -15798,6 +16479,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548558565}
   m_CullTransparentMesh: 1
+--- !u!114 &1548558570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548558565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &1548965858
 GameObject:
   m_ObjectHideFlags: 0
@@ -16018,7 +16719,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1595751616}
-  - component: {fileID: 1595751622}
   - component: {fileID: 1595751619}
   - component: {fileID: 1595751618}
   - component: {fileID: 1595751617}
@@ -16226,37 +16926,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1595751622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595751615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef984d4f9ecace4c8fa0868651e4fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExitOnNewPagePush: 0
-  rectTransform: {fileID: 0}
-  animationDuration: 1
-  entryClip: {fileID: 0}
-  entryMode: 0
-  onEntryStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onEntryCompletion:
-    m_PersistentCalls:
-      m_Calls: []
-  exitClip: {fileID: 0}
-  exitMode: 0
-  onExitStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onExitCompletion:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1598018006
 GameObject:
   m_ObjectHideFlags: 0
@@ -17035,6 +17704,7 @@ GameObject:
   - component: {fileID: 1654958660}
   - component: {fileID: 1654958659}
   - component: {fileID: 1654958658}
+  - component: {fileID: 1654958661}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -17085,9 +17755,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -17107,6 +17777,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1654958661}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17169,6 +17852,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654958656}
   m_CullTransparentMesh: 1
+--- !u!114 &1654958661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654958656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: 2caca474afc6c1848acc68b2a33823fc, type: 2}
+  playOnStart: 0
 --- !u!1 &1656866451
 GameObject:
   m_ObjectHideFlags: 0
@@ -18272,9 +18975,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitOnNewPagePush: 0
   rectTransform: {fileID: 0}
-  animationDuration: 1
+  animationDuration: 0.8
   entryClip: {fileID: 0}
-  entryMode: 0
+  entryMode: 1
   onEntryStart:
     m_PersistentCalls:
       m_Calls:
@@ -18294,7 +18997,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   exitClip: {fileID: 0}
-  exitMode: 0
+  exitMode: 1
   onExitStart:
     m_PersistentCalls:
       m_Calls:
@@ -18339,7 +19042,7 @@ RectTransform:
   m_Children:
   - {fileID: 853170201}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18933,7 +19636,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1801850204
 GameObject:
@@ -20245,6 +20948,7 @@ GameObject:
   - component: {fileID: 1947570264}
   - component: {fileID: 1947570263}
   - component: {fileID: 1947570262}
+  - component: {fileID: 1947570265}
   m_Layer: 5
   m_Name: Credits Button
   m_TagString: Untagged
@@ -20295,9 +20999,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -20317,6 +21021,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1947570265}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1370324314}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -20379,6 +21096,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947570260}
   m_CullTransparentMesh: 1
+--- !u!114 &1947570265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947570260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &1984026882
 GameObject:
   m_ObjectHideFlags: 0
@@ -20807,6 +21544,7 @@ GameObject:
   - component: {fileID: 2095345611}
   - component: {fileID: 2095345610}
   - component: {fileID: 2095345609}
+  - component: {fileID: 2095345612}
   m_Layer: 5
   m_Name: Apply Button
   m_TagString: Untagged
@@ -20857,9 +21595,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -20879,6 +21617,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2095345612}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 437977520}
         m_TargetAssemblyTypeName: PedroAurelio.MenuScreens.Settings.AudioSettings,
           Assembly-CSharp
@@ -20954,6 +21705,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095345607}
   m_CullTransparentMesh: 1
+--- !u!114 &2095345612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095345607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &2125643407
 GameObject:
   m_ObjectHideFlags: 0
@@ -20966,6 +21737,7 @@ GameObject:
   - component: {fileID: 2125643411}
   - component: {fileID: 2125643410}
   - component: {fileID: 2125643409}
+  - component: {fileID: 2125643412}
   m_Layer: 5
   m_Name: Apply Button
   m_TagString: Untagged
@@ -21016,9 +21788,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -21038,6 +21810,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2125643412}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1595751615}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -21100,6 +21885,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125643407}
   m_CullTransparentMesh: 1
+--- !u!114 &2125643412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125643407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c1e64b387f1112042b21f174aef7da9d, type: 2}
+  playOnStart: 0
 --- !u!1 &2126755301
 GameObject:
   m_ObjectHideFlags: 0
@@ -21112,6 +21917,7 @@ GameObject:
   - component: {fileID: 2126755305}
   - component: {fileID: 2126755304}
   - component: {fileID: 2126755303}
+  - component: {fileID: 2126755306}
   m_Layer: 5
   m_Name: Reset Button
   m_TagString: Untagged
@@ -21162,9 +21968,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_SelectedColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -21183,7 +21989,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2126755304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2126755306}
+        m_TargetAssemblyTypeName: PedroAurelio.SOEventSystem.PlayAudioEventActivator,
+          Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2126755304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21222,6 +22041,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126755301}
   m_CullTransparentMesh: 1
+--- !u!114 &2126755306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126755301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c860b8ba7a3021a47b256205d39b632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2689cc7b0c3b0f5448307b031d8f11c9, type: 2}
+  itemsNeeded: 0
+  willReduceItems: 0
+  onFail:
+    m_PersistentCalls:
+      m_Calls: []
+  clipSO: {fileID: 11400000, guid: c8488cfbc3f01b345948c3416535444c, type: 2}
+  playOnStart: 0
 --- !u!1 &2132264963
 GameObject:
   m_ObjectHideFlags: 0
