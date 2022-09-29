@@ -1,60 +1,78 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
  
-namespace PedroAurelio.SOEventSystem
+namespace PedroAurelio.AudioSystem
 {
     public class AudioManager : MonoBehaviour
     {
-        private AudioSource _audioSource;
+        [SerializeField] private AudioEventChannelSO sfxChannel;
+        [SerializeField] private AudioEventChannelSO musicChannel;
+        [SerializeField] private AudioEventChannelSO uiChannel;
+        [SerializeField] private AudioPlayer audioPlayerPrefab;
+        [SerializeField] private int initialPoolCount;
+
+        private ObjectPool<AudioPlayer> _audioPlayerPool;
 
         private Coroutine _disableCoroutine;
 
         private void Awake()
         {
-            _audioSource = GetComponent<AudioSource>();
-            _audioSource.enabled = false;
+            _audioPlayerPool = new ObjectPool<AudioPlayer>(OnCreateAudioPlayer, OnGetAudioPlayer, OnReleaseAudioPlayer);
+
+            InitializePool(initialPoolCount);
         }
+
+        #region Pool Methods
+        private AudioPlayer OnCreateAudioPlayer()
+        {
+            var audioPlayer = Instantiate(audioPlayerPrefab, transform);
+            return audioPlayer;
+        }
+
+        private void OnGetAudioPlayer(AudioPlayer audioPlayer)
+        {
+            audioPlayer.gameObject.SetActive(true);
+        }
+
+        private void OnReleaseAudioPlayer(AudioPlayer audioPlayer)
+        {
+            audioPlayer.DisableAudioPlayer();
+            audioPlayer.gameObject.SetActive(false);
+        }
+
+        private void InitializePool(int count)
+        {
+            var audioPlayers = new AudioPlayer[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                var temp = _audioPlayerPool.Get();
+                audioPlayers[i] = temp;
+            }
+
+            for (int i = audioPlayers.Length - 1; i >= 0; i--)
+                _audioPlayerPool.Release(audioPlayers[i]);
+        }
+        #endregion
 
         private void PlayAudio(AudioClipSO clipSO, Vector3 position, float delay)
         {
-            if (_disableCoroutine != null)
-                StopCoroutine(_disableCoroutine);
-
-            _audioSource.enabled = true;
-            _audioSource.clip = clipSO.Clip;
-            _audioSource.outputAudioMixerGroup = clipSO.MixerGroup;
-            transform.position = position;
-
-            if (delay == 0f)
-            {
-                _audioSource.Play();
-                _disableCoroutine = StartCoroutine(WaitForClipCoroutine(clipSO.Clip.length));
-            }
-            else
-            {
-                _audioSource.PlayDelayed(delay);
-                _disableCoroutine = StartCoroutine(WaitForClipCoroutine(clipSO.Clip.length, delay));
-            }
-        }
-
-        private IEnumerator WaitForClipCoroutine(float duration, float delay = 0f)
-        {
-            if (delay != 0f)
-                yield return new WaitForSeconds(delay);
-
-            yield return new WaitForSeconds(duration);
-            _audioSource.enabled = false;
+            var audioPlayer = _audioPlayerPool.Get();
+            audioPlayer.PlayAudio(clipSO, position, delay, () => _audioPlayerPool.Release(audioPlayer));
         }
 
         private void OnEnable()
         {
-            AudioEventListener.onPlayAudio += PlayAudio;
+            sfxChannel.onRaiseAudio += PlayAudio;
+            musicChannel.onRaiseAudio += PlayAudio;
+            uiChannel.onRaiseAudio += PlayAudio;
         }
 
         private void OnDisable()
         {
-            AudioEventListener.onPlayAudio -= PlayAudio;
+            sfxChannel.onRaiseAudio -= PlayAudio;
+            musicChannel.onRaiseAudio -= PlayAudio;
+            uiChannel.onRaiseAudio -= PlayAudio;
         }
     }
 }

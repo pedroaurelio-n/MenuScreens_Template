@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using PedroAurelio.Utils;
-using DG.Tweening;
 using UnityEngine.Events;
+using DG.Tweening;
+using PedroAurelio.Utils;
 
 namespace PedroAurelio.MenuScreens
 {

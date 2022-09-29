@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using PedroAurelio.Data;
 
-namespace PedroAurelio.MenuScreens.Settings
+namespace PedroAurelio.MenuScreens
 {
     public class AudioSettings : MonoBehaviour
     {
         [Header("Dependencies")]
         [SerializeField] private AudioMixer mixer;
-        [SerializeField] private AudioSource music;
-        [SerializeField] private float delay;
 
         [Header("Sliders")]
         [SerializeField] private Slider masterSlider;
@@ -31,8 +28,6 @@ namespace PedroAurelio.MenuScreens.Settings
         {
             _data = DataManager.Instance.GetCurrentData().AudioData;
             UpdateSliderValues();
-
-            music.PlayDelayed(delay);
         }
 
         private void UpdateSliderValues(AudioData data = null)
