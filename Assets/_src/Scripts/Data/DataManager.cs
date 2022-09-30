@@ -35,33 +35,18 @@ namespace PedroAurelio.Data
                 SaveData();
             }
             else
-                SettingsData = LoadData();
+                LoadData();
         }
 
         public void CreateNewData()
         {
             SettingsData = new SettingsData();
-            Debug.Log($"new settingsdata created");
         }
 
         public SettingsData GetCurrentData()
         {            
             return SettingsData;
         }
-
-        // public void ChangeData(AudioData data)
-        // {
-        //     if (SettingsData == null)
-        //     {
-        //         Debug.LogWarning($"SettingsData wasn't created yet.");
-        //         return;
-        //     }
-
-        //     SettingsData.AudioData.MasterVolume = data.MasterVolume;
-        //     SettingsData.AudioData.SfxVolume = data.SfxVolume;
-        //     SettingsData.AudioData.MusicVolume = data.MusicVolume;
-        //     SettingsData.AudioData.UIVolume = data.UIVolume;
-        // }
 
         public void SaveData()
         {
@@ -71,11 +56,9 @@ namespace PedroAurelio.Data
             {
                 streamWriter.Write(dataToWrite);
             }
-
-            Debug.Log($"settingsdata saved");
         }
 
-        public SettingsData LoadData()
+        public void LoadData()
         {
             string jsonFile;
 
@@ -86,8 +69,7 @@ namespace PedroAurelio.Data
             
             var dataToLoad = JsonUtility.FromJson<SettingsData>(jsonFile);
 
-            Debug.Log($"settingsdata loaded");
-            return dataToLoad;
+            SettingsData = dataToLoad;
         }
     }
 }

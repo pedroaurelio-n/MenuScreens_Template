@@ -5,12 +5,12 @@ using PedroAurelio.Data;
 
 namespace PedroAurelio.MenuScreens
 {
-    public class AudioSettings : MonoBehaviour
+    public class AudioSettings : AMenuSettings
     {
         [Header("Dependencies")]
         [SerializeField] private AudioMixer mixer;
 
-        [Header("Sliders")]
+        [Header("UI Elements")]
         [SerializeField] private Slider masterSlider;
         [SerializeField] private Slider sfxSlider;
         [SerializeField] private Slider musicSlider;
@@ -22,73 +22,60 @@ namespace PedroAurelio.MenuScreens
         [SerializeField] private string musicVolume = "MusicVolume";
         [SerializeField] private string uiVolume = "UIVolume";
 
-        private AudioData _data;
-
-        private void Start()
-        {
-            _data = DataManager.Instance.GetCurrentData().AudioData;
-            UpdateSliderValues();
-        }
-
-        private void UpdateSliderValues(AudioData data = null)
+        protected override void UpdateUIValues(SettingsData data = null)
         {
             if (data == null)
-                data = _data;
+                data = _Data;
 
-            masterSlider.value = data.MasterVolume;
+            masterSlider.value = data.AudioData.MasterVolume;
             SetMasterVolume(masterSlider.value);
 
-            sfxSlider.value = data.SfxVolume;
+            sfxSlider.value = data.AudioData.SfxVolume;
             SetSfxVolume(sfxSlider.value);
 
-            musicSlider.value = data.MusicVolume;
+            musicSlider.value = data.AudioData.MusicVolume;
             SetMusicVolume(musicSlider.value);
 
-            uiSlider.value = data.UIVolume;
+            uiSlider.value = data.AudioData.UIVolume;
             SetUIVolume(uiSlider.value);
         }
 
-        public void ApplyChanges()
+        public override void DiscardChanges()
         {
-            DataManager.Instance.SaveData();
-            UpdateSliderValues();
+            DataManager.Instance.LoadData();
+            _Data = DataManager.Instance.GetCurrentData();
+            UpdateUIValues();
         }
 
-        public void DiscardChanges()
+        public override void ResetDefault()
         {
-            _data = DataManager.Instance.LoadData().AudioData;
-            UpdateSliderValues();
-        }
-
-        public void ResetDefault()
-        {
-            var fullData = DataManager.Instance.GetCurrentData().AudioData;
-            fullData.SetDefaultValues();
-            UpdateSliderValues(fullData);
+            var currentData = DataManager.Instance.GetCurrentData();
+            currentData.AudioData.SetDefaultValues();
+            UpdateUIValues(currentData);
         }
 
         public void SetMasterVolume(float value)
         {
             mixer.SetFloat(masterVolume, Mathf.Log10(value) * 20f);
-            _data.MasterVolume = masterSlider.value;
+            _Data.AudioData.MasterVolume = masterSlider.value;
         }
 
         public void SetSfxVolume(float value)
         {
             mixer.SetFloat(sfxVolume, Mathf.Log10(value) * 20f);
-            _data.SfxVolume = sfxSlider.value;
+            _Data.AudioData.SfxVolume = sfxSlider.value;
         }
 
         public void SetMusicVolume(float value)
         {
             mixer.SetFloat(musicVolume, Mathf.Log10(value) * 20f);
-            _data.MusicVolume = musicSlider.value;
+            _Data.AudioData.MusicVolume = musicSlider.value;
         }
 
         public void SetUIVolume(float value)
         {
             mixer.SetFloat(uiVolume, Mathf.Log10(value) * 20f);
-            _data.UIVolume = uiSlider.value;
+            _Data.AudioData.UIVolume = uiSlider.value;
         }
     }
 }
