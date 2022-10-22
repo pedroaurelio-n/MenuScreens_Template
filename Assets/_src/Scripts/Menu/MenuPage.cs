@@ -40,7 +40,6 @@ namespace PedroAurelio.MenuScreens
         [SerializeField] private UnityEvent onExitStart;
         [SerializeField] private UnityEvent onExitCompletion;
 
-        private AudioSource _audioSource;
         private CanvasGroup _canvasGroup;
 
         private Coroutine _animationCoroutine;
@@ -49,13 +48,7 @@ namespace PedroAurelio.MenuScreens
 
         private void Awake()
         {
-            _audioSource = GetComponent<AudioSource>();
             _canvasGroup = GetComponent<CanvasGroup>();
-
-            _audioSource.playOnAwake = false;
-            _audioSource.loop = false;
-            _audioSource.spatialBlend = 0f;
-            _audioSource.enabled = false;
         }
 
         public void Enter(bool playAudio)
@@ -158,8 +151,6 @@ namespace PedroAurelio.MenuScreens
             
             if (_audioCoroutine != null)
                 StopCoroutine(_audioCoroutine);
-
-            _audioCoroutine = StartCoroutine(PlayClip(entryClip));
         }
 
         private void PlayExitClip(bool playAudio)
@@ -169,20 +160,6 @@ namespace PedroAurelio.MenuScreens
             
             if (_audioCoroutine != null)
                 StopCoroutine(_audioCoroutine);
-
-            _audioCoroutine = StartCoroutine(PlayClip(exitClip));
-        }
-
-        private IEnumerator PlayClip(AudioClip clip)
-        {
-            var waitForClip = new WaitForSeconds(clip.length);
-
-            _audioSource.enabled = true;
-            _audioSource.PlayOneShot(clip);
-
-            yield return waitForClip;
-
-            _audioSource.enabled = false;
         }
         #endregion
     }

@@ -8,12 +8,9 @@ namespace PedroAurelio.AudioSystem
         [SerializeField] private AudioEventChannelSO sfxChannel;
         [SerializeField] private AudioEventChannelSO musicChannel;
         [SerializeField] private AudioEventChannelSO uiChannel;
-        [SerializeField] private AudioPlayer audioPlayerPrefab;
         [SerializeField] private int initialPoolCount;
 
         private ObjectPool<AudioPlayer> _audioPlayerPool;
-
-        private Coroutine _disableCoroutine;
 
         private void Awake()
         {
@@ -25,14 +22,16 @@ namespace PedroAurelio.AudioSystem
         #region Pool Methods
         private AudioPlayer OnCreateAudioPlayer()
         {
-            var audioPlayer = Instantiate(audioPlayerPrefab, transform);
+            var newPlayer = new GameObject("AudioPlayer");
+            newPlayer.transform.SetParent(transform);
+
+            newPlayer.AddComponent<AudioSource>();
+            var audioPlayer = newPlayer.AddComponent<AudioPlayer>();
+
             return audioPlayer;
         }
 
-        private void OnGetAudioPlayer(AudioPlayer audioPlayer)
-        {
-            audioPlayer.gameObject.SetActive(true);
-        }
+        private void OnGetAudioPlayer(AudioPlayer audioPlayer) => audioPlayer.gameObject.SetActive(true);
 
         private void OnReleaseAudioPlayer(AudioPlayer audioPlayer)
         {

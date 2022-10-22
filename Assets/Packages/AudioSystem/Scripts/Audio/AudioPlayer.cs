@@ -8,10 +8,7 @@ namespace PedroAurelio.AudioSystem
     {
         private AudioSource _audioSource;
 
-        private void Awake()
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
+        private void Awake() => _audioSource = GetComponent<AudioSource>();
 
         public void DisableAudioPlayer()
         {
@@ -23,6 +20,7 @@ namespace PedroAurelio.AudioSystem
         {
             _audioSource.enabled = true;
             _audioSource.loop = clipSO.Loop;
+            _audioSource.spatialBlend = clipSO.SpatialBlend;
             _audioSource.clip = clipSO.Clip;
             _audioSource.outputAudioMixerGroup = clipSO.MixerGroup;
             transform.position = position;

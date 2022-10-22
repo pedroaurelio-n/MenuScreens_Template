@@ -15,9 +15,6 @@ namespace PedroAurelio.AudioSystem
                 audioChannel.RaiseEvent(clipSO, transform.position, delay);
         }
 
-        public void PlayAudio()
-        {
-            audioChannel.RaiseEvent(clipSO, transform.position, delay);            
-        }
+        public void PlayAudio() => audioChannel.RaiseEvent(clipSO, transform.position, delay);
     }
 }
