@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
@@ -6,16 +5,6 @@ using PedroAurelio.Utils;
 
 namespace PedroAurelio.MenuScreens
 {
-    #region Entry Enums
-    public enum EntryMode
-    {
-        NONE,
-        FADE,
-        ZOOM
-    }
-    #endregion
-
-    [RequireComponent(typeof(AudioSource))]
     [RequireComponent(typeof(CanvasGroup))]
     [DisallowMultipleComponent]
     public class MenuPage : MonoBehaviour
@@ -29,22 +18,18 @@ namespace PedroAurelio.MenuScreens
         [SerializeField, Range(0.1f, 5f)] private float animationDuration = 1f;
         
         [Header("Entry Settings")]
-        [SerializeField] private AudioClip entryClip;
         [SerializeField] private EntryMode entryMode = EntryMode.NONE;
         [SerializeField] private UnityEvent onEntryStart;
         [SerializeField] private UnityEvent onEntryCompletion;
 
         [Header("Exit Settings")]
-        [SerializeField] private AudioClip exitClip;
         [SerializeField] private EntryMode exitMode = EntryMode.NONE;
         [SerializeField] private UnityEvent onExitStart;
         [SerializeField] private UnityEvent onExitCompletion;
 
         private CanvasGroup _canvasGroup;
 
-        private Coroutine _animationCoroutine;
         private Tween _animationTween;
-        private Coroutine _audioCoroutine;
 
         private void Awake()
         {
@@ -78,8 +63,6 @@ namespace PedroAurelio.MenuScreens
 
             _canvasGroup.alpha = 0f;
             _animationTween = DOTweenUtils.UIFade(_canvasGroup, 1f, animationDuration, () => onEntryStart?.Invoke(), () => onEntryCompletion?.Invoke());
-
-            PlayEntryClip(playAudio);
         }
 
         private void FadeOut(bool playAudio)
@@ -89,8 +72,6 @@ namespace PedroAurelio.MenuScreens
 
             _canvasGroup.alpha = 1f;
             _animationTween = DOTweenUtils.UIFade(_canvasGroup, 0f, animationDuration, () => onExitStart?.Invoke(), () => onExitCompletion?.Invoke());
-
-            PlayExitClip(playAudio);
         }
 
         private void ZoomIn(bool playAudio)
@@ -103,8 +84,6 @@ namespace PedroAurelio.MenuScreens
 
             rectTransform.localScale = Vector3.zero;
             _animationTween = DOTweenUtils.UIScale(rectTransform, Vector3.one, animationDuration, () => onEntryStart?.Invoke(), () => onEntryCompletion?.Invoke());
-
-            PlayEntryClip(playAudio);
         }
 
         private void ZoomOut(bool playAudio)
@@ -117,8 +96,6 @@ namespace PedroAurelio.MenuScreens
 
             rectTransform.localScale = Vector3.one;
             _animationTween = DOTweenUtils.UIScale(rectTransform, Vector3.zero, animationDuration, () => onExitStart?.Invoke(), () => onExitCompletion?.Invoke());
-
-            PlayExitClip(playAudio);
         }
 
         private void DefaultIn(bool playAudio)
@@ -128,8 +105,6 @@ namespace PedroAurelio.MenuScreens
 
             onEntryStart?.Invoke();
             onEntryCompletion?.Invoke();
-
-            PlayEntryClip(playAudio);
         }
 
         private void DefaultOut(bool playAudio)
@@ -139,28 +114,13 @@ namespace PedroAurelio.MenuScreens
             
             onExitStart?.Invoke();
             onExitCompletion?.Invoke();
-
-            PlayExitClip(playAudio);
         }
 
-        #region Audio Methods
-        private void PlayEntryClip(bool playAudio)
+        enum EntryMode
         {
-            if (!playAudio || entryClip == null)
-                return;
-            
-            if (_audioCoroutine != null)
-                StopCoroutine(_audioCoroutine);
+            NONE,
+            FADE,
+            ZOOM
         }
-
-        private void PlayExitClip(bool playAudio)
-        {
-            if (!playAudio || exitClip == null)
-                return;
-            
-            if (_audioCoroutine != null)
-                StopCoroutine(_audioCoroutine);
-        }
-        #endregion
     }
 }

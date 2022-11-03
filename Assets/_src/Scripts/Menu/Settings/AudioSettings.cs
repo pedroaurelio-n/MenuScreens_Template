@@ -27,16 +27,16 @@ namespace PedroAurelio.MenuScreens
             if (data == null)
                 data = _Data;
 
-            masterSlider.value = data.AudioData.MasterVolume;
+            masterSlider.SetValueWithoutNotify(data.AudioData.MasterVolume);
             SetMasterVolume(masterSlider.value);
 
-            sfxSlider.value = data.AudioData.SfxVolume;
+            sfxSlider.SetValueWithoutNotify(data.AudioData.SfxVolume);
             SetSfxVolume(sfxSlider.value);
 
-            musicSlider.value = data.AudioData.MusicVolume;
+            musicSlider.SetValueWithoutNotify(data.AudioData.MusicVolume);
             SetMusicVolume(musicSlider.value);
 
-            uiSlider.value = data.AudioData.UIVolume;
+            uiSlider.SetValueWithoutNotify(data.AudioData.UIVolume);
             SetUIVolume(uiSlider.value);
         }
 

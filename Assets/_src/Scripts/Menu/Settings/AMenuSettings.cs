@@ -7,12 +7,16 @@ namespace PedroAurelio.MenuScreens
 {
     public abstract class AMenuSettings : MonoBehaviour
     {
+        [SerializeField] private bool updateValuesOnStart;
+
         protected SettingsData _Data;
 
         private void Start()
         {
             _Data = DataManager.Instance.GetCurrentData();
-            UpdateUIValues();
+
+            if (updateValuesOnStart)
+                UpdateUIValues();
         }
 
         protected abstract void UpdateUIValues(SettingsData data = null);
